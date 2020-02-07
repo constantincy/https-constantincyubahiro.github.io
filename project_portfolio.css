@@ -11,6 +11,12 @@ a {
     text-decoration: none;
 }
 
+.style_1 {
+    font-family: 'Metal Mania', cursive;
+    color: antiquewhite;
+    font-size: 20px
+}
+
 #profile_photo {
     height: 200px;
     width: 200px;
@@ -36,19 +42,28 @@ a {
 }
 
 .container h1 {
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Metal Mania', cursive;
     color: yellow;
     font-weight: bold
 }
 
+.container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    font-size: 20px
+}
+
 .top-wrapper {
+    /* height: fit-content; */
     padding: 180px 0 100px 0;
     /* background-image: url(https://prog-8.com/images/html/advanced/top_en.png); */
     background-image: url(./life.jpg);
     background-size: cover;
-    color: white;
+    color: rgb(26, 14, 14);
     text-align: center;
 }
+
+
 
 .top-wrapper h1 {
     opacity: 0.7;
@@ -179,14 +194,25 @@ img {
     flex-wrap: wrap;
     justify-content: center;
 
+
+
 }
 
-.testimonial_card {
+#testimonial_card {
     border: 1px solid white;
-    margin-bottom: 20px;
     width: 200px;
-    background-color: antiquewhite
+    margin-bottom: 20px;
+
+
 }
+
+/* .rounded_photos {
+    border-radius: 50%;
+    width: 200px;
+    position: relative;
+    left: 30px;
+    margin: 30px
+} */
 
 .inline_element {
     display: inline;
@@ -210,6 +236,7 @@ img {
 
 .white_color {
     color: white;
+    font-family: 'Metal Mania', cursive;
 }
 
 .horizontally_centered_text {
@@ -217,14 +244,12 @@ img {
 }
 
 .card_background_color {
-    background-color: chocolate;
     border: 1px solid white;
-    margin: 10px;
     width: 150px;
+    margin: 10px;
+    background-color: chocolate;
     border-radius: 5px;
-
 }
-
 
 .rounded_photos {
     border-radius: 50%;
@@ -238,9 +263,7 @@ img {
     padding: 50px
 }
 
-
-
-@media screen and (max-width: 512px) {
+/* @media screen and (max-width: 512px) {
     testimonies_container {
         justify-content: center
     }
@@ -259,9 +282,13 @@ img {
         align-items: center;
     }
 
-}
+} */
 
 @media screen and (max-width: 423px) {
+    .top-wrapper {
+        height: fit-content;
+    }
+
     .testimonies_container {
         display: flex;
         flex-wrap: wrap;
@@ -272,7 +299,10 @@ img {
     .testimonial_card {
         width: 100%;
     }
+
+
 }
+
 
 @media screen and (min-width: 423px) and (max-width: 500px) {
     .testimonies_container {
@@ -295,10 +325,27 @@ img {
         align-items: center;
     }
 
+    .outer_testimonies_container {
+        overflow-y: scroll;
+    }
+
+    .inner_testimonies_container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: fit-content;
+        font-family: 'Caveat', cursive;
+    }
+
+
     .testimonial_card {
-        width: 20%;
+        width: 50%;
+        height: 50%;
     }
 }
+
+
+
 
 @media screen and (min-width: 700px) {
     .outer_testimonies_container {
@@ -320,17 +367,10 @@ img {
 }
 
 
-
-
-
-
-
 /* lesson wrapper nelly testimonials */
 
 .lesson-wrapper {
-    height: 500px;
-    padding-bottom: 80px;
-    background-color: #f7f7f7;
+
     text-align: center;
 }
 
@@ -372,13 +412,19 @@ img {
     font-weight: normal;
 }
 
-.message-wrapper {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 80px;
+.message-wrapper_1 {
     text-align: center;
-    margin-top: 120px;
-    background-image: url(./kigali.jpg)
-        /* background-color: chocolate */
+    background-image: url(./webdev.jpg);
+    background-size: 100vh;
+
+
+}
+
+.message-wrapper {
+    text-align: center;
+    background-image: url(./kigali.jpg);
+    background-size: 100vh;
+
 }
 
 .message {
@@ -388,10 +434,24 @@ img {
     box-shadow: 0 7px #1a7940;
 }
 
+.form {
+
+    align-items: center;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+}
+}
+
 .message:active {
     position: relative;
     top: 7px;
     box-shadow: none;
+}
+
+footer {
+    background-color: chocolate;
+
 }
 
 footer img {
@@ -399,10 +459,7 @@ footer img {
 }
 
 footer p {
-    color: #b3aeb5;
+    background-color: chocolate;
     font-size: 12px;
-}
-
-footer {
-    padding-top: 30px;
+    font-style: bold
 }
